@@ -20,6 +20,7 @@
     <header>
       <h1>Hello, I am Fekadu Tasie</h1>
       <p>Software Engineering student and aspiring web developer.</p>
+
       <nav>
         <a href="#about">About</a> | <a href="#skills">Skills</a> |
         <a href="#projects">Projects</a> | <a href="#education">Education</a> |
@@ -31,31 +32,38 @@
     <main>
       <section id="about">
         <h2>About Me</h2>
+
         <img src="images/profile.jpg" alt="My profile photo" width="200" />
+
         <p>
           I am a 3<sup>rd</sup> year
           <strong>Software Engineering</strong> student. I <em>really</em> enjoy
           building websites, and my current goal is to
           <mark>become a full-stack web developer</mark>.
         </p>
+
         <p>
           Languages I have used: <b>Python</b>, <b>C++</b> and
           <i>JavaScript</i>.
         </p>
+
         <p>Fun fact: I drink 2 litres of H<sub>2</sub>O while coding.</p>
       </section>
 
       <aside>
         <h2>What Inspires Me</h2>
+
         <blockquote>
           "The best way to predict the future is to invent it." — Alan Kay
         </blockquote>
+
         <p>My teacher always says <q>practice beats theory</q>.</p>
         <p>Book: <cite>Clean Code</cite> by Robert C. Martin.</p>
       </aside>
 
       <section id="skills">
         <h2>Skills</h2>
+
         <ul>
           <li>
             Programming Languages
@@ -65,6 +73,7 @@
               <li>Java</li>
             </ul>
           </li>
+
           <li>
             Web Development
             <ul type="circle">
@@ -74,6 +83,7 @@
               <li>ReactJS (learning)</li>
             </ul>
           </li>
+
           <li>
             Soft Skills
             <ul>
@@ -85,6 +95,7 @@
         </ul>
 
         <h3>My Learning Roadmap</h3>
+
         <ol type="1">
           <li>HTML structure and content</li>
           <li>CSS layout and design</li>
@@ -95,13 +106,17 @@
         </ol>
 
         <h3>Tools I Use</h3>
+
         <dl>
           <dt>VS Code</dt>
           <dd>The code editor I use to write programs.</dd>
+
           <dt>Chrome DevTools</dt>
           <dd>Helps me inspect web pages and find errors.</dd>
+
           <dt>Git and GitHub</dt>
           <dd>Tools I use to save and share my projects.</dd>
+
           <dt>ChatGPT</dt>
           <dd>Helps me understand programming concepts and solve problems.</dd>
         </dl>
@@ -109,7 +124,6 @@
 
       <section id="projects">
         <h2>Projects</h2>
-
         <article>
           <h3>Simple Calculator</h3>
           <img
@@ -131,15 +145,20 @@
           />
           <p>A system concept for managing library books and records.</p>
         </article>
+
         <article>
           <h3>My First Program</h3>
+
           <p>
             The first thing I wrote in Python was
             <code>print("Hello, World!")</code>.
           </p>
+
           <pre><code>for i in range(3):
     print("Hello", i)</code></pre>
+
           <p>Example of a Java program:</p>
+
           <pre><code>public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
@@ -154,13 +173,16 @@
 
       <section id="education">
         <h2>Education</h2>
+
         <h3>BSc in Software Engineering</h3>
+
         <p>Addis Ababa Science and Technology University (AASTU).</p>
 
         <table border="1" cellpadding="8" cellspacing="0">
           <caption>
             Academic Record — BSc in Software Engineering
           </caption>
+
           <thead>
             <tr>
               <th>Year</th>
@@ -169,6 +191,7 @@
               <th>Grade</th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
               <td>1st</td>
@@ -176,18 +199,21 @@
               <td>Introduction to Computing</td>
               <td>A</td>
             </tr>
+
             <tr>
               <td>1st</td>
               <td>2nd</td>
               <td>Fundamentals of Programming</td>
               <td>A</td>
             </tr>
+
             <tr>
               <td>2nd</td>
               <td>1st</td>
               <td>Object Oriented Programming</td>
               <td>A-</td>
             </tr>
+
             <tr>
               <td>2nd</td>
               <td>2nd</td>
@@ -200,38 +226,90 @@
 
       <section id="contact">
         <h2>Contact</h2>
+
         <p>You can connect with me through the links below:</p>
+
         <ul>
           <li>
             Email:
-            <a href="mailto:fekadu.tasie@example.com"
-              >fekadu.tasie@example.com</a
-            >
+            <a href="mailto:fekadutasie@gmail.com">fekadutasie@gmail.com</a>
           </li>
           <li>
             LinkedIn:
-            <a href="https://linkedin.com" target="_blank">://linkedin.com</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
           </li>
           <li>
             GitHub:
-            <a href="https://github.com" target="_blank">://github.com</a>
+            <a href="https://github.com/fekadutasie-dotcom" target="_blank"
+              >GitHub</a
+            >
           </li>
-          <li>
-            Phone:
-            <a href="tel:+251911223344">+251 emergency services 223 344</a>
-          </li>
+          <li>Phone: <a href="tel:+251903153121">+251903153121</a></li>
         </ul>
+
         <p>Connect with me banner image:</p>
+
         <img
           src="images/connect-banner.jpg"
           alt="Connect with me"
           width="600"
         />
+
+        <form action="thank-you.html" method="get">
+          <fieldset>
+            <legend>Your Details</legend>
+
+            <p>
+              <label for="fullname">Full Name:</label>
+              <input type="text" id="fullname" name="fullname" />
+            </p>
+
+            <p>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" />
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your Message</legend>
+            <p>
+              <label for="reason">Reason for Contact:</label>
+
+              <select id="reason" name="reason">
+                <optgroup label="Work">
+                  <option value="internship">Internship</option>
+                  <option value="freelance">Freelance</option>
+                  <option value="job">Job</option>
+                </optgroup>
+
+                <optgroup label="Study">
+                  <option value="group-project">Group Project</option>
+                  <option value="tutoring">Tutoring</option>
+                </optgroup>
+
+                <optgroup label="Other">
+                  <option value="other">Other</option>
+                </optgroup>
+              </select>
+            </p>
+
+            <p>
+              <label for="message">Your Message:</label>
+            </p>
+
+            <textarea id="message" name="message" rows="6" cols="40"></textarea>
+
+            <p>
+              <button type="submit">Submit</button>
+              <button type="reset">Clear</button>
+            </p>
+          </fieldset>
+        </form>
       </section>
     </main>
 
     <footer>
-      <p>Copyright 2026 Fekadu Tasie. All rights reserved.</p>
+      <p>Copyright &copy; 2026 Fekadu Tasie. All rights reserved.</p>
     </footer>
   </body>
 </html>
