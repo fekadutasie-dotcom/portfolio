@@ -96,7 +96,7 @@
 
         <h3>My Learning Roadmap</h3>
 
-        <ol type="1">
+        <ol>
           <li>HTML structure and content</li>
           <li>CSS layout and design</li>
           <li>JavaScript and the DOM</li>
@@ -124,6 +124,7 @@
 
       <section id="projects">
         <h2>Projects</h2>
+
         <article>
           <h3>Simple Calculator</h3>
           <img
@@ -145,7 +146,6 @@
           />
           <p>A system concept for managing library books and records.</p>
         </article>
-
         <article>
           <h3>My First Program</h3>
 
@@ -175,7 +175,6 @@
         <h2>Education</h2>
 
         <h3>BSc in Software Engineering</h3>
-
         <p>Addis Ababa Science and Technology University (AASTU).</p>
 
         <table border="1" cellpadding="8" cellspacing="0">
@@ -248,34 +247,125 @@
         </ul>
 
         <p>Connect with me banner image:</p>
-
         <img
           src="images/connect-banner.jpg"
           alt="Connect with me"
           width="600"
         />
 
-        <form action="thank-you.html" method="get">
+        <form
+          action="thank-you.html"
+          method="post"
+          enctype="multipart/form-data"
+        >
           <fieldset>
             <legend>Your Details</legend>
 
             <p>
               <label for="fullname">Full Name:</label>
-              <input type="text" id="fullname" name="fullname" />
+              <input type="text" id="fullname" name="fullname" required />
             </p>
 
             <p>
               <label for="email">Email:</label>
-              <input type="email" id="email" name="email" />
+              <input type="email" id="email" name="email" required />
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Project Details</legend>
+
+            <p>
+              <label for="phone">Phone Number:</label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                pattern="0[79][0-9]{8}"
+                title="10 digits starting with 09 or 07"
+              />
+            </p>
+
+            <p>Preferred Contact Method:</p>
+
+            <input
+              type="radio"
+              id="contact-email"
+              name="contact-method"
+              value="email"
+            />
+            <label for="contact-email">Email</label>
+
+            <input
+              type="radio"
+              id="contact-phone"
+              name="contact-method"
+              value="phone"
+            />
+            <label for="contact-phone">Phone</label>
+            <p>
+              <label for="meeting-date">Preferred Meeting Date:</label>
+              <input
+                type="date"
+                id="meeting-date"
+                name="meeting-date"
+                min="2026-11-01"
+              />
+            </p>
+
+            <p>
+              <label for="weeks">Estimated Duration (weeks):</label>
+              <input
+                type="number"
+                id="weeks"
+                name="weeks"
+                min="1"
+                max="52"
+                step="1"
+              />
+            </p>
+
+            <p>
+              <label for="brief">Upload Project Brief:</label>
+              <input type="file" id="brief" name="brief" />
+            </p>
+
+            <p>
+              <label for="color">Preferred Color:</label>
+              <input type="color" id="color" name="color" value="#1f5fa8" />
+            </p>
+
+            <p>
+              <label for="priority">Project Priority (1–10):</label>
+              <input
+                type="range"
+                id="priority"
+                name="priority"
+                min="1"
+                max="10"
+                value="7"
+              />
+            </p>
+
+            <p>
+              <label for="budget">Estimated Budget (ETB):</label>
+              <input
+                type="number"
+                id="budget"
+                name="budget"
+                min="1000"
+                step="500"
+              />
             </p>
           </fieldset>
 
           <fieldset>
             <legend>Your Message</legend>
+
             <p>
               <label for="reason">Reason for Contact:</label>
 
-              <select id="reason" name="reason">
+              <select id="reason" name="reason" required>
                 <optgroup label="Work">
                   <option value="internship">Internship</option>
                   <option value="freelance">Freelance</option>
@@ -297,7 +387,18 @@
               <label for="message">Your Message:</label>
             </p>
 
-            <textarea id="message" name="message" rows="6" cols="40"></textarea>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              cols="40"
+              required
+            ></textarea>
+
+            <p>
+              <input type="checkbox" id="copy" name="copy" value="yes" />
+              <label for="copy">Send me a copy</label>
+            </p>
 
             <p>
               <button type="submit">Submit</button>
