@@ -18,6 +18,8 @@
 
   <body>
     <header>
+      <!-- Lab 14: Personal Canvas Logo -->
+      <canvas id="logo" width="120" height="120"> Fekadu Tasie Logo </canvas>
       <h1>Hello, I am Fekadu Tasie</h1>
       <p>Software Engineering student and aspiring web developer.</p>
 
@@ -197,6 +199,12 @@
             30%
           </meter>
         </p>
+        <!-- Lab 14: Skill Bar Chart -->
+        <h3>My Skill Bar Chart</h3>
+
+        <canvas id="skillChart" width="300" height="150">
+          Skill levels bar chart
+        </canvas>
 
         <h3>My Learning Roadmap</h3>
 
@@ -225,6 +233,63 @@
           <dd>Helps me understand programming concepts and solve problems.</dd>
         </dl>
       </section>
+      <!-- Lab 14: Canvas Drawing -->
+      <script>
+        // Personal Logo
+        const canvas = document.getElementById("logo");
+        const ctx = canvas.getContext("2d");
+
+        // 1. Draw blue square background
+        ctx.fillStyle = "#1f5fa8";
+        ctx.fillRect(0, 0, 120, 120);
+
+        // 2. Draw white circle
+        ctx.beginPath();
+        ctx.arc(60, 60, 45, 0, 2 * Math.PI);
+        ctx.fillStyle = "white";
+        ctx.fill();
+
+        // 3. Draw initials FT
+        ctx.fillStyle = "#1f5fa8";
+        ctx.font = "bold 36px Arial";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("FT", 60, 62);
+
+        // Skill Bar Chart
+        const chart = document.getElementById("skillChart");
+        const chartCtx = chart.getContext("2d");
+
+        // Skill names and levels (percentages)
+        const skills = [
+          { name: "HTML", level: 90 },
+          { name: "Java", level: 75 },
+          { name: "C++", level: 80 },
+          { name: "Python", level: 65 },
+        ];
+
+        // Draw chart background
+        chartCtx.fillStyle = "#eeeeee";
+        chartCtx.fillRect(0, 0, 300, 150);
+
+        // Draw skill bars
+        skills.forEach((skill, index) => {
+          const barWidth = 40;
+          const gap = 30;
+          const x = 20 + index * (barWidth + gap);
+          const barHeight = skill.level;
+
+          // Draw bar
+          chartCtx.fillStyle = "#1f5fa8";
+          chartCtx.fillRect(x, 130 - barHeight, barWidth, barHeight);
+
+          // Draw skill name
+          chartCtx.fillStyle = "black";
+          chartCtx.font = "12px Arial";
+          chartCtx.textAlign = "center";
+          chartCtx.fillText(skill.name, x + barWidth / 2, 145);
+        });
+      </script>
 
       <section id="projects">
         <h2>Projects</h2>
@@ -555,5 +620,62 @@
         <time datetime="2026-11-04">4 November 2026</time>
       </p>
     </footer>
+    <!-- Lab 14: Canvas Drawing -->
+    <script>
+      // Personal Logo
+      const canvas = document.getElementById("logo");
+      const ctx = canvas.getContext("2d");
+
+      // 1. Draw blue square background
+      ctx.fillStyle = "#1f5fa8";
+      ctx.fillRect(0, 0, 120, 120);
+
+      // 2. Draw white circle
+      ctx.beginPath();
+      ctx.arc(60, 60, 45, 0, 2 * Math.PI);
+      ctx.fillStyle = "white";
+      ctx.fill();
+
+      // 3. Draw initials FT
+      ctx.fillStyle = "#1f5fa8";
+      ctx.font = "bold 36px Arial";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText("FT", 60, 62);
+
+      // Skill Bar Chart
+      const chart = document.getElementById("skillChart");
+      const chartCtx = chart.getContext("2d");
+
+      // Skill names and levels (percentages)
+      const skills = [
+        { name: "HTML", level: 90 },
+        { name: "Java", level: 75 },
+        { name: "C++", level: 80 },
+        { name: "Python", level: 65 },
+      ];
+
+      // Draw chart background
+      chartCtx.fillStyle = "#eeeeee";
+      chartCtx.fillRect(0, 0, 300, 150);
+
+      // Draw skill bars
+      skills.forEach((skill, index) => {
+        const barWidth = 40;
+        const gap = 30;
+        const x = 20 + index * (barWidth + gap);
+        const barHeight = skill.level;
+
+        // Draw bar
+        chartCtx.fillStyle = "#1f5fa8";
+        chartCtx.fillRect(x, 130 - barHeight, barWidth, barHeight);
+
+        // Draw skill name
+        chartCtx.fillStyle = "black";
+        chartCtx.font = "12px Arial";
+        chartCtx.textAlign = "center";
+        chartCtx.fillText(skill.name, x + barWidth / 2, 145);
+      });
+    </script>
   </body>
 </html>
