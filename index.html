@@ -41,7 +41,9 @@
         <p>
           <a href="#contact">Send me a message</a>
           or
-          <a href="files/cv.pdf" download>Download my CV</a>.
+          <a href="files/cv.pdf" download>
+            Download my <abbr title="Curriculum Vitae">CV</abbr> </a
+          >.
         </p>
 
         <button
@@ -74,11 +76,24 @@
         </p>
 
         <p>
-          Languages I have used: <b>Python</b>, <b>C++</b> and
-          <i>JavaScript</i>.
+          Languages I have used:
+          <b>Python</b>, <b>C++</b> and <i>JavaScript</i>.
         </p>
 
         <p>Fun fact: I drink 2 litres of H<sub>2</sub>O while coding.</p>
+
+        <!-- Lab 13: HTML entities -->
+        <p>
+          My favourite tag is &lt;main&gt;, because it tells the browser where
+          the important content is &amp; helps screen readers.
+        </p>
+
+        <!-- Lab 13: Abbreviation -->
+        <p>
+          I enjoy learning
+          <abbr title="HyperText Markup Language">HTML</abbr>
+          and other web technologies.
+        </p>
 
         <h3>Hear my introduction</h3>
         <audio controls>
@@ -119,7 +134,6 @@
               <li>Java</li>
             </ul>
           </li>
-
           <li>
             Web Development
             <ul type="circle">
@@ -142,6 +156,7 @@
 
         <!-- Lab 12: Skill levels using meter -->
         <h3>Skill Levels</h3>
+
         <p>
           <label for="lvl-html">HTML</label>
           <meter id="lvl-html" value="0.8" min="0" max="1">80%</meter>
@@ -167,7 +182,7 @@
           </meter>
         </p>
 
-        <!-- Your turn: fourth skill meter -->
+        <!-- Fourth skill meter -->
         <p>
           <label for="lvl-java">Java</label>
           <meter
@@ -265,7 +280,13 @@
         <h2>Education</h2>
 
         <h3>BSc in Software Engineering</h3>
-        <p>Addis Ababa Science and Technology University (AASTU).</p>
+
+        <!-- Lab 13: Machine-readable university date and abbreviation -->
+        <p>
+          <abbr title="Addis Ababa Science and Technology University"
+            >AASTU</abbr
+          >, <time datetime="2023-09">September 2023</time> – present
+        </p>
 
         <!-- Lab 12: Degree progress -->
         <p>
@@ -273,7 +294,6 @@
           <progress id="degree" value="40" max="100">40%</progress>
           40%
         </p>
-
         <table border="1" cellpadding="8" cellspacing="0">
           <caption>
             Academic Record — BSc in Software Engineering
@@ -302,6 +322,7 @@
               <td>Fundamentals of Programming</td>
               <td>A</td>
             </tr>
+
             <tr>
               <td>2nd</td>
               <td>1st</td>
@@ -329,17 +350,24 @@
             Email:
             <a href="mailto:fekadutasie@gmail.com">fekadutasie@gmail.com</a>
           </li>
+
           <li>
             LinkedIn:
             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
           </li>
+
           <li>
             GitHub:
-            <a href="https://github.com/fekadutasie-dotcom" target="_blank"
-              >GitHub</a
-            >
+            <a href="https://github.com/fekadutasie-dotcom" target="_blank">
+              GitHub
+            </a>
           </li>
-          <li>Phone: <a href="tel:+251903153121">+251903153121</a></li>
+
+          <!-- Lab 13: Phone link and non-breaking spaces -->
+          <li>
+            Phone:
+            <a href="tel:+251903153121">+251&nbsp;903&nbsp;153&nbsp;121</a>
+          </li>
         </ul>
 
         <p>Connect with me banner image:</p>
@@ -411,7 +439,6 @@
               value="phone"
             />
             <label for="contact-phone">Phone</label>
-
             <p>
               <label for="meeting-date">Preferred Meeting Date:</label>
               <input
@@ -438,6 +465,7 @@
               <label for="brief">Upload Project Brief:</label>
               <input type="file" id="brief" name="brief" />
             </p>
+
             <p>
               <label for="color">Preferred Color:</label>
               <input type="color" id="color" name="color" value="#1f5fa8" />
@@ -518,7 +546,14 @@
     </main>
 
     <footer>
-      <p>Copyright &copy; 2026 Fekadu Tasie. All rights reserved.</p>
+      <!-- Lab 13: Copyright entity -->
+      <p>&copy; 2026 Fekadu Tasie. All rights reserved.</p>
+
+      <!-- Lab 13: Last updated date -->
+      <p>
+        Last updated:
+        <time datetime="2026-11-04">4 November 2026</time>
+      </p>
     </footer>
   </body>
 </html>
